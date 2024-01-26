@@ -39,9 +39,10 @@ app.post("/",function(req,res){
     
     const jsonData = JSON.stringify(edata);
     const url = "https://us21.api.mailchimp.com/3.0/lists/f3887f19d1";
+    const authen = "omkarr:"+API_Keyy;
     const options = {
         method: "POST",
-        auth: "omkarr:6cd32b147ae8e534537423030865c3d9-us21"
+        auth: authen
     }
  
     const request = https.request(url,options,function(response){
@@ -86,7 +87,7 @@ app.listen(process.env.PORT || 3000,function(){
 //new API
 //bb9b444085b9b3ed2c7218ad333157f4-us21
 //new 2 API
-//6cd32b147ae8e534537423030865c3d9-us21
+
 
 //Audience ID
 //f3887f19d1.
